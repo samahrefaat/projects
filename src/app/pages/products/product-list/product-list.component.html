@@ -1,0 +1,81 @@
+<section class="top">
+<div class="contain">
+    <div class="row">
+        <div class="col-12">
+            <h2
+            style=
+            "margin-top: 20px;
+            margin-left: 20px;
+            "
+            
+            >المنتجات</h2>
+            <table class="table"
+             style=
+             "border-bottom: 1px solid rgb(128, 103, 103);"
+>
+<thead>
+    <tr>
+        <th></th>
+      <th scope="col">صورة</th>
+      <th scope="col">الاسم</th>
+      <th scope="col">القسم</th>
+      <th scope="col">الاسعار</th>
+
+      <th scope="col">الطابعة</th>
+      <th scope="col">الكمية</th>
+      <th scope="col">النشط</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+    <mat-icon
+    style="
+    margin-top : 5px;
+    "
+    >delete_sweep</mat-icon>
+      </td>
+      <td>
+          <img 
+          src="assets/img/one.jpg"
+          style="
+          width: 38px;
+          height: 38px
+          "
+          >
+
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <mat-icon
+        style="
+        margin-top : 5px;
+        color: green;
+        "
+        >check_circle_outline</mat-icon>
+
+      </td>
+
+
+    </tr>
+</table>
+<mat-paginator
+style="
+margin-top:43%
+"
+ [length]="100"
+ [pageSize]="10"
+[pageSizeOptions]="pageSizeOption"
+
+              aria-label="أسطر20">
+</mat-paginator>
+            
+        </div>
+    </div>
+
+</div>
+</section>
