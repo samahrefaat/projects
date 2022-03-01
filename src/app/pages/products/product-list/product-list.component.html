@@ -17,17 +17,16 @@
     <tr>
         <th></th>
       <th scope="col">صورة</th>
-      <th scope="col">الاسم</th>
+      <th scope="col"></th>
       <th scope="col">القسم</th>
       <th scope="col">الاسعار</th>
 
-      <th scope="col">الطابعة</th>
-      <th scope="col">الكمية</th>
+      
       <th scope="col">النشط</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr *ngFor="let product of products index as i">
       <td>
     <mat-icon
     style="
@@ -36,29 +35,21 @@
     >delete_sweep</mat-icon>
       </td>
       <td>
-          <img 
-          src="assets/img/one.jpg"
-          style="
-          width: 38px;
-          height: 38px
-          "
-          >
-
-      </td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>
-        <mat-icon
+        <img [src]="product?.picture"
         style="
-        margin-top : 5px;
-        color: green;
+        width: 38px;
+        height: 38px
         "
-        >check_circle_outline</mat-icon>
+         >
+
+        
 
       </td>
+      <td> {{product.name}}</td>
+      <td> {{product.note}}</td>
+      <td> {{product.show}}</td>
+      
+     
 
 
     </tr>

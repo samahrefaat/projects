@@ -8,6 +8,7 @@ import { HeaderComponent } from './main-components/header/header.component';
 import { ProductFormComponent } from './pages/products/product-form/product-form.component';
 import { ProductListComponent } from './pages/products/product-list/product-list.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 //material
 import { MatSelectModule } from '@angular/material/select';
@@ -34,6 +35,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatSelectModule,
     MatPaginatorModule ,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     
     BrowserAnimationsModule

@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/api/v1/'
+  apiUrl: 
+
+  ' http://omar01-001-site1.ftempurl.com/api/Menu/Meals?Token=03FW76830YB1G9M5N8Y943WS2ABU9JU5037279FR9RZ6T307XOH54'
 
 };
 
