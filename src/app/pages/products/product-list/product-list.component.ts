@@ -1,6 +1,5 @@
-import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../interface/product';
+import { Product } from '../../../interface/product.model';
 import { ProductService } from '../../../services/product.service';
 
 
@@ -11,8 +10,8 @@ import { ProductService } from '../../../services/product.service';
 })
 export class ProductListComponent implements OnInit {
   products:Product[]=[]
-  userId:"59b3c7be-2c7b-7e48-651c-9c10e1ecabd5"
-  brancheIds:"2f1172a9-1b5d-6fc4-777e-3e3b283cabde"
+  userId:string
+  brancheIds:string
  
   numbers=[
     {number:"5" , viewValue: '5'},
@@ -36,8 +35,14 @@ export class ProductListComponent implements OnInit {
   }
   private _getProducts() {
     this.productsService.getProducts(this.userId, this.brancheIds).subscribe((products) => {
+      let myMap =new Map();
       this.products = products;
-      if (products) { console.log(products) }
+      myMap.set( 'task', products)
+      let pp = myMap.get('task')
+     // const meals = pp.result
+      this.products=pp.result
+    //  console.log(products)
+      //if (products) { console.log(products) }
 
     });
   } 

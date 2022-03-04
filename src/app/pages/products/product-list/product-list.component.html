@@ -17,16 +17,15 @@
     <tr>
         <th></th>
       <th scope="col">صورة</th>
-      <th scope="col"></th>
+      <th scope="col">الاسم</th>
       <th scope="col">القسم</th>
-      <th scope="col">الاسعار</th>
 
       
       <th scope="col">النشط</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of products index as i">
+    <tr *ngFor="let product of products index as i" [routerLink]="['/meal-details/',product.id]">
       <td>
     <mat-icon
     style="
@@ -35,10 +34,10 @@
     >delete_sweep</mat-icon>
       </td>
       <td>
-        <img [src]="product?.picture"
+        <img src="http://omar01-001-site1.ftempurl.com/Images/{{product.picture}}"
         style="
-        width: 38px;
-        height: 38px
+        width: 60px;
+        height: 60px
         "
          >
 

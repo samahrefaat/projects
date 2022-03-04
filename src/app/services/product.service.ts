@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product } from '../interface/product';
+import { Product } from '../interface/product.model';
 import { environment } from '../../environments/environment';
 import { LocalstorageService } from './localstorage.service';
 
@@ -11,6 +11,8 @@ import {HttpParams} from "@angular/common/http";
 })
 export class ProductService {
   apiURLProducts = environment.apiUrl;
+  apiMeals = 'http://omar01-001-site1.ftempurl.com/api/Menu/MealDetail?'
+
 
   constructor(
     private http: HttpClient,
@@ -31,7 +33,11 @@ getProducts(userId: string, brancheIds: string): Observable<Product[]> {
         'Content-Type': 'application/json'
       })
     });
+  
   }
+  getProduct(productId: string): Observable<Product> {
+   return this.http.get<Product>(`${this.apiMeals}id=${productId}&Token=03FW76830YB1G9M5N8Y943WS2ABU9JU5037279FR9RZ6T307XOH54`);
+ }
   
 /*
 "{

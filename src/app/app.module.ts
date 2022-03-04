@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MealDetailsComponent } from './pages/products/meal-details/meal-details.component';
 
 
 
@@ -24,7 +25,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     AppComponent,
     HeaderComponent,
     ProductFormComponent,
-    ProductListComponent
+    ProductListComponent,
+    MealDetailsComponent
   ],
   imports: [
     BrowserModule,
